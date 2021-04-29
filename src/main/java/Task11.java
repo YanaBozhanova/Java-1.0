@@ -16,7 +16,7 @@ public class Task11 {
     int resultmax = Math.max(y,  x1);
         System.out.println(resultmax);
 
-       /* Вариант с введением дополнтельной переменной для конвертации в double 
+       /* Вариант с введением дополнтельной переменной для конвертации в double
         int  resultmin = Math.min(y,  x1);
         double f = resultmin;
         System.out.println(f);*/
