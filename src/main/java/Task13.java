@@ -18,7 +18,7 @@ public class Task13 {
         for (int i = 0; i < result.length; i++) {
             String st = result[i];
             boolean onlyLatinAlphabet = st.matches("^[a-zA-Z0-9]+$");
-            if (onlyLatinAlphabet == true) {
+            if (onlyLatinAlphabet) {
                 afterresult[i] = st;
             }
 
