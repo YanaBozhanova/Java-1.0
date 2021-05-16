@@ -19,11 +19,11 @@ public class Itog3 {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите число строк: ");
-        int n = console.nextInt(); //Считываем число строк, введённое пользователм
+        int n = console.nextInt(); //Считываем число, введённое пользователм
         int max = 0; //Создаём переменную для количества символов в слове, содержащем максимальное количество различных символов
         String maxWord = ""; //Создаем переменную для слова, содержащего максимальное количество различных символов
         System.out.println("Введите " + n + " строк (-и):");
-        List<String> strings = new ArrayList<>();
+        List<String> strings = new ArrayList<>(); //Создаём массив строк
         for (int i = 0; i < n; i++) {
             strings.add(console.next());
         }
