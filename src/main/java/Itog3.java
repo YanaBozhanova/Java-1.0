@@ -10,36 +10,29 @@
 Строка 3: 111111111111
 Ответ: привет*/
 
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
 public class Itog3 {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
+        System.out.println("Введите число строк: ");
         int n = console.nextInt(); //Считываем число строк, введённое пользователм
-        String[] str = new String[n]; //Создаём массив размерносью п для слов, которые будет вводить пользователь
-        //String word;
         int max = 0; //Создаём переменную для количества символов в слове, содержащем максимальное количество различных символов
-        // Записываем
-        for (int i = 0; i < str.length; i++) {
-            str[i] = console.nextLine()
+        String maxWord = ""; //Создаем переменную для слова, содержащего максимальное количество различных символов
+        System.out.println("Введите " + n + " строк (-и):");
+        List<String> strings = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            strings.add(console.next());
+        }
+        for (String word: strings) {                      //считаем количесвто уникальных символов в слове - элементе массива строк
+            int count = (int) word.chars().distinct().count();
+            if (max < count) {max = count; maxWord = word;}
         }
 
-
-        for (int i = 0; i < str.length ; i++) {
-            char[] ch = str[i].toCharArray();
-            int count = 0;
-            for (int j = 0; j < ch.length; j++) {
-                if (ch[i]!=ch[i+1]) count = count + 1;
-            }
-            if (max <= count) max = count;
-        }
-        System.out.println(max);
-
-
-
-
+        System.out.println("Ответ: " + maxWord);
 
     }
 }
